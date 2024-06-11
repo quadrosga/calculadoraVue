@@ -4,7 +4,7 @@ import { reactive } from 'vue';
 const estado = reactive({
     num1: 0,
     num2: 0,
-    operacao: 'soma',
+    operacao: ' ',
     resultado: null,
 })
 
