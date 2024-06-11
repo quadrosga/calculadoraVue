@@ -54,27 +54,37 @@ function divisão() {
 </script>
 
 <template>
-<h1>Calculadora aritmética</h1>
-<br />
-<label>Primeiro número:</label>
-<input type="number" v-model="estado.num1" placeholder="Insira um número" class="form-control">
-<br />
-<label>Segundo número:</label>
-<input type="number" v-model="estado.num2" placeholder="Insira um número">
-<br />
-<label>Selecionar operação:</label>
-<select v-model="estado.operacao" @change="calcularResultado" class="form-select">
-    <option value="soma">Soma</option>
-    <option value="subtracao">Subtração</option>
-    <option value="multiplicacao">Multiplicação</option>
-    <option value="divisao">Divisão</option>
-</select>
-<br />
-<label>Resultado:</label>
-<input type="number" :value="estado.resultado" readonly>
+<div class="calculadora">
+    <h1>Calculadora aritmética</h1>
+    <br />
+    <div class="form">
+        <label>Primeiro número:</label>
+        <input type="number" v-model="estado.num1" placeholder="Insira um número" class="form-control">
+        <br />
+        <label>Segundo número:</label>
+        <input type="number" v-model="estado.num2" placeholder="Insira um número" class="form-control">
+        <br />
+        <label>Selecionar operação:</label>
+        <select v-model="estado.operacao" @change="calcularResultado" class="form-select">
+            <option value="soma">Soma</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+        </select>
+        <br />
+        <label>Resultado:</label>
+        <input type="text" :value="estado.resultado" class="form-control" readonly>
+    </div>
+</div>
 
 </template>
 
 <style scoped>
-
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 </style>
