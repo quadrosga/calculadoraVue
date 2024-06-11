@@ -43,7 +43,7 @@ function multiplicacao() {
 function divisão() {
     const { num1, num2 } = estado;
     if (num2 === 0) {
-        alert("Denominador não pode ser 0")
+        alert("Denominador não pode ser 0");
         return null;
     }
     else {
